@@ -1,6 +1,6 @@
-import { createServer } from 'http';
+import { createServer } from "http";
 import { v4 } from "uuid";
-import { User } from "./model/user"
+import { User } from "./model/user";
 import {
   getUsers,
   getUserById,
@@ -52,6 +52,13 @@ const server = createServer((request, response) => {
           if (!username || !age) {
             response.writeHead(400, { "Content-Type": "application/json" });
             response.end(JSON.stringify({ error: "Invalid body" }));
+          } else if (
+            typeof username !== "string" ||
+            typeof age !== "number" ||
+            !Array.isArray(hobbies)
+          ) {
+            response.writeHead(400, { "Content-Type": "application/json" });
+            response.end(JSON.stringify({ error: "Invalid body data type" }));
           } else {
             const newUser: User = {
               id: v4(),
