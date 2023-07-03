@@ -1,8 +1,8 @@
-# crud-api
+# Crud-api
 
 task : [https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/crud-api/assignment.md](https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/crud-api/assignment.md)
 
-# installation
+# Installation
 
     git clone https://github.com/anutaguzova/crud-api.git
 
@@ -21,7 +21,7 @@ production mode:
 
 I used Postman for testing:
 
-Implemented endpoint api/users:
+## Implemented endpoint api/users:
 
 
 
