@@ -1,4 +1,4 @@
-import http from "http";
+import { createServer } from 'http';
 import { v4 } from "uuid";
 import { User } from "./model/user"
 import {
@@ -9,7 +9,9 @@ import {
   deleteUser,
 } from "./db";
 
-const server = http.createServer((request, response) => {
+import "dotenv/config";
+
+const server = createServer((request, response) => {
   const { url, method } = request;
 
   try {

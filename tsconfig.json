@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true
-  }
+    "module": "CommonJS",
+    "target":"ES2020",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "outDir": "./dist/",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    
+  },
 }
